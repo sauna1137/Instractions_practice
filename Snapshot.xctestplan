@@ -1,0 +1,59 @@
+{
+  "configurations" : [
+    {
+      "id" : "FB93C8F4-28D4-472C-8B4D-1C2BF5034923",
+      "name" : "Test Snapshots",
+      "options" : {
+
+      }
+    },
+    {
+      "id" : "C4D9A363-5498-42F4-BE65-B4BB4DEF2C2D",
+      "name" : "Generate Snapshots",
+      "options" : {
+        "environmentVariableEntries" : [
+          {
+            "key" : "RECORD_MODE",
+            "value" : "true"
+          },
+          {
+            "key" : "FB_REFERENCE_IMAGE_DIR",
+            "value" : "$(SRCROOT)\/Example\/Snapshot Tests\/Supporting Files\/Snapshots\/ReferenceImages"
+          },
+          {
+            "key" : "IMAGE_DIFF_DIR",
+            "value" : "$(SRCROOT)\/Example\/Snapshot Tests\/Supporting Files\/Snapshots\/FailureDiffs"
+          }
+        ]
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "FB_REFERENCE_IMAGE_DIR",
+        "value" : "$(SRCROOT)\/Example\/Snapshot Tests\/Supporting Files\/Snapshots\/ReferenceImages"
+      },
+      {
+        "key" : "IMAGE_DIFF_DIR",
+        "value" : "$(SRCROOT)\/Example\/Snapshot Tests\/Supporting Files\/Snapshots\/FailureDiffs"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Instructions Example.xcodeproj",
+      "identifier" : "B639B28020D4E71D009996CF",
+      "name" : "InstructionsSnapshotTests"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Instructions Example.xcodeproj",
+        "identifier" : "B64131082737EE3C006F6D8D",
+        "name" : "InstructionsSnapshotTests"
+      }
+    }
+  ],
+  "version" : 1
+}
