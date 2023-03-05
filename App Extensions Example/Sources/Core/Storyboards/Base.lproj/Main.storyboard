@@ -86,13 +86,48 @@
                                     <constraint firstAttribute="width" constant="120" id="C1H-dR-MAb"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc2-8Y-AV3">
+                                <rect key="frame" x="81" y="510" width="231" height="71"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="BbQ-Tu-22h">
+                                        <rect key="frame" x="10" y="10" width="211" height="51"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gY7-43-3K5">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="51"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVo-8h-Kjd">
+                                                <rect key="frame" x="123" y="0.0" width="88" height="51"/>
+                                                <color key="backgroundColor" red="0.42041347789115646" green="0.60132334183673475" blue="0.79472257653061229" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button2"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="BbQ-Tu-22h" firstAttribute="top" secondItem="Dc2-8Y-AV3" secondAttribute="top" constant="10" id="GTC-5w-LlT"/>
+                                    <constraint firstItem="BbQ-Tu-22h" firstAttribute="leading" secondItem="Dc2-8Y-AV3" secondAttribute="leading" constant="10" id="QcQ-4x-Q1c"/>
+                                    <constraint firstAttribute="bottom" secondItem="BbQ-Tu-22h" secondAttribute="bottom" constant="10" id="cKf-PQ-s7U"/>
+                                    <constraint firstAttribute="trailing" secondItem="BbQ-Tu-22h" secondAttribute="trailing" constant="10" id="zaj-5M-Jam"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lh2-Hc-1yV" firstAttribute="centerY" secondItem="AQP-Yd-5Sb" secondAttribute="centerY" id="2QM-T8-wHd"/>
                             <constraint firstItem="KUM-qr-PNb" firstAttribute="centerX" secondItem="AQP-Yd-5Sb" secondAttribute="centerX" id="7QL-5J-Su1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dc2-8Y-AV3" secondAttribute="trailing" constant="65" id="7pE-7d-Zgc"/>
                             <constraint firstItem="lh2-Hc-1yV" firstAttribute="top" secondItem="xWW-Vc-dX2" secondAttribute="bottom" constant="30" id="Adg-eW-grl"/>
                             <constraint firstItem="0s9-LK-SHZ" firstAttribute="centerX" secondItem="AQP-Yd-5Sb" secondAttribute="centerX" id="Fvn-CV-wf9"/>
+                            <constraint firstItem="Dc2-8Y-AV3" firstAttribute="leading" secondItem="AQP-Yd-5Sb" secondAttribute="leadingMargin" constant="65" id="I4I-Kb-YBR"/>
+                            <constraint firstItem="0s9-LK-SHZ" firstAttribute="top" secondItem="Dc2-8Y-AV3" secondAttribute="bottom" constant="20" id="PiX-e3-yBa"/>
+                            <constraint firstItem="Dc2-8Y-AV3" firstAttribute="top" secondItem="lh2-Hc-1yV" secondAttribute="bottom" constant="20" id="RkL-Ru-lwu"/>
                             <constraint firstItem="KUM-qr-PNb" firstAttribute="top" secondItem="0s9-LK-SHZ" secondAttribute="bottom" constant="22" id="Sh7-pJ-2Ss"/>
                             <constraint firstItem="xWW-Vc-dX2" firstAttribute="centerX" secondItem="AQP-Yd-5Sb" secondAttribute="centerX" id="eeb-IZ-PIr"/>
                             <constraint firstItem="lh2-Hc-1yV" firstAttribute="centerX" secondItem="AQP-Yd-5Sb" secondAttribute="centerX" id="gok-YK-1dF"/>
@@ -100,9 +135,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonStackView" destination="Dc2-8Y-AV3" id="yFH-CZ-8FE"/>
                         <outlet property="imageView" destination="xWW-Vc-dX2" id="pPY-mc-2P7"/>
                         <outlet property="nextButton" destination="0s9-LK-SHZ" id="MxF-AM-uae"/>
                         <outlet property="returnButton" destination="KUM-qr-PNb" id="Rcg-Qe-805"/>
+                        <outlet property="stackView" destination="BbQ-Tu-22h" id="Ybk-Mx-A3N"/>
                         <outlet property="testView" destination="lh2-Hc-1yV" id="Fwr-Gv-5rK"/>
                     </connections>
                 </viewController>
@@ -176,6 +213,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

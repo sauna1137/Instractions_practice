@@ -12,6 +12,8 @@ class textViewController: UIViewController,
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var buttonStackView: UIView!
+    @IBOutlet weak var stackView: UIStackView!
 
     // チュートリアルを表示する前に、Instructionsを初期化します。
     var coachMarksController = CoachMarksController()
@@ -38,7 +40,7 @@ class textViewController: UIViewController,
 
     // 表示回数
     func numberOfCoachMarks(for coachMarksController: Instructions.CoachMarksController) -> Int {
-        return 4
+        return 6
     }
 
 
@@ -50,6 +52,8 @@ class textViewController: UIViewController,
         case 1: return coachMarksController.helper.makeCoachMark(for: imageView)
         case 2: return coachMarksController.helper.makeCoachMark(for: nextButton)
         case 3: return coachMarksController.helper.makeCoachMark(for: returnButton)
+        case 4: return coachMarksController.helper.makeCoachMark(for: stackView)
+        case 5: return coachMarksController.helper.makeCoachMark(for: buttonStackView)
         default: return coachMarksController.helper.makeCoachMark(for: testView)
         }
     }
@@ -69,6 +73,8 @@ class textViewController: UIViewController,
             case 1: return "imageViewだよ"
             case 2: return "nextButtonだよ"
             case 3: return "returnButtonだよ"
+            case 4: return "stackViewだよ"
+            case 5: return "viewだよ"
             default: return ""
             }
         }
