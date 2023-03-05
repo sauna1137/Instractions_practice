@@ -69,7 +69,7 @@ class textViewController: UIViewController,
 
         var hintText: String {
             switch index {
-            case 0: return "textViewだよ"
+            case 0: return "testViewだよ"
             case 1: return "imageViewだよ"
             case 2: return "nextButtonだよ"
             case 3: return "returnButtonだよ"
